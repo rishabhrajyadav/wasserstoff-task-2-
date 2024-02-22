@@ -54,8 +54,6 @@ abstract contract StateDeployDiamond is HelperContract {
         // deploy diamond
         loadBalancer = new LoadBalancer(cut0, _args);
 
-        //upgrade diamond with facets
-
         //build cut struct
         FacetCut[] memory cut = new FacetCut[](2);
 
