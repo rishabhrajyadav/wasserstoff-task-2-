@@ -1,13 +1,6 @@
 // SPDX-License-Identifier: UNLICENSED
 pragma solidity ^0.8.0;
 
-/******************************************************************************\
-* Authors: Timo Neumann <timo@fyde.fi>
-* EIP-2535 Diamonds: https://eips.ethereum.org/EIPS/eip-2535
-* Helper functions for the translation from the jest tests in the original repo
-* to solidity tests.
-/******************************************************************************/
-
 import "../lib/solidity-stringutils/src/strings.sol";
 import "../src/interfaces/IDiamond.sol";
 import "../src/interfaces/IDiamondLoupe.sol";

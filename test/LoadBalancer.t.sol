@@ -4,15 +4,10 @@ pragma solidity ^0.8.0;
 import "./TestStates.sol";
 
 // test proper deployment of diamond
-contract TestDeployDiamond is StateDeployDiamond {
-
-
-    // TEST CASES
-
+contract LoadBalancerTest is StateDeployDiamond {
     function test1HasThreeFacets() public {
         assertEq(facetAddressList.length, 3);
     }
-
 
     function test2FacetsHaveCorrectSelectors() public {
 
