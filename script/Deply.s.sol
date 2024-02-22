@@ -1,13 +1,6 @@
 // SPDX-License-Identifier: MIT
 pragma solidity ^0.8.0;
 
-/******************************************************************************\
-* Authors: Timo Neumann <timo@fyde.fi>, Rohan Sundar <rohan@fyde.fi>
-* EIP-2535 Diamonds: https://eips.ethereum.org/EIPS/eip-2535
-
-* Script to deploy template diamond with Cut, Loupe and Ownership facet
-/******************************************************************************/
-
 import "forge-std/Script.sol";
 import "../src/LoadBalancer.sol";
 import "../src/facets/DiamondCutFacet.sol";
