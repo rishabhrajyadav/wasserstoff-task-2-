@@ -24,9 +24,9 @@ Security considerations included proper validation of input parameters, preventi
 
 ## Challenges Faced
 
-### Gas Limitations
+###ations
 
-One significant challenge was dealing with gas limitations, especially during updates to the registry or when deploying new implementation contracts. Gas optimization techniques, such as using the `delegatecall` opcode judiciously and minimizing storage reads/writes, were employed to mitigate these challenges.
+One significant challenge was dealing withations, especially during updates to the registry or when deploying new implementation contracts.ization techniques, such as using the `delegatecall` opcode judiciously and minimizing storage reads/writes, were employed to mitigate these challenges.
 
 ### Handling Multiple Contracts in Diamond Contract
 
@@ -34,7 +34,7 @@ Integrating and managing multiple contracts within the Diamond contract posed an
 
 ## Conclusion
 
-The development of the `LoadBalancer` smart contract involved careful consideration of design decisions, overcoming gas limitations, addressing security challenges, and managing the complexity of handling multiple contracts within the Diamond contract. Continuous testing, community engagement, and adherence to best practices were pivotal in achieving a robust and secure smart contract.
+The development of the `LoadBalancer` smart contract involved careful consideration of design decisions, overcomingations, addressing security challenges, and managing the complexity of handling multiple contracts within the Diamond contract. Continuous testing, community engagement, and adherence to best practices were pivotal in achieving a robust and secure smart contract.
 
 For a detailed history of commits, pull requests, and discussions, refer to the project's Git repository.
 
@@ -80,3 +80,128 @@ The script invokes `startBroadcast` and `stopBroadcast` methods, suggesting a br
 
 ## Conclusion
 The script defines the deployment logic for a `LoadBalancer`, including the deployment of facets and the initialization of the Diamond contract. It leverages environment variables for transaction signing and orchestrates the deployment process within the Ethereum network using Solidity.
+
+# Test Results
+use `forge test --ffi` instead `forge test` for excuting the test files successfully.
+Below are the test cases you will get after executing test files .
+
+### Test2Facet.sol:Test2Facet
+
+Ran 20 tests for src/facets/Test2Facet.sol:Test2Facet
+
+- test2Func1() 
+- test2Func10() 
+- test2Func11() 
+- test2Func12() 
+- test2Func13() 
+- test2Func14() 
+- test2Func15() 
+- test2Func16() 
+- test2Func17() 
+- test2Func18() 
+- test2Func19() 
+- test2Func2() 
+- test2Func20() 
+- test2Func3() 
+- test2Func4() 
+- test2Func5() 
+- test2Func6() 
+- test2Func7() 
+- test2Func8() 
+- test2Func9() 
+
+### Test1Facet.sol:Test1Facet
+
+Ran 20 tests for src/facets/Test1Facet.sol:Test1Facet
+
+- test1Func1() 
+- test1Func10() 
+- test1Func11() 
+- test1Func12() 
+- test1Func13() 
+- test1Func14() 
+- test1Func15() 
+- test1Func16() 
+- test1Func17() 
+- test1Func18() 
+- test1Func19() 
+- test1Func2() 
+- test1Func20() 
+- test1Func3() 
+- test1Func4() 
+- test1Func5() 
+- test1Func6() 
+- test1Func7() 
+- test1Func8() 
+- test1Func9() 
+
+### Test2facet.sol:Test2Facet
+
+Ran 20 tests for src/facets/Test2facet.sol:Test2Facet
+
+- test2Func1() 
+- test2Func10() 
+- test2Func11() 
+- test2Func12() 
+- test2Func13() 
+- test2Func14() 
+- test2Func15() 
+- test2Func16() 
+- test2Func17() 
+- test2Func18() 
+- test2Func19() 
+- test2Func2() 
+- test2Func20() 
+- test2Func3() 
+- test2Func4() 
+- test2Func5() 
+- test2Func6() 
+- test2Func7() 
+- test2Func8() 
+- test2Func9() 
+
+### LoadBalancer.t.sol:TestCacheBug
+
+Ran 1 test for test/LoadBalancer.t.sol:TestCacheBug
+
+- testNoCacheBug() 
+  - Verifies that the `LoadBalancer` contract does not exhibit caching issues.
+
+### LoadBalancer.t.sol:TestAddFacet1
+
+Ran 3 tests for test/LoadBalancer.t.sol:TestAddFacet1
+
+- test4AddTest1FacetFunctions() 
+  - Tests the addition of functions from Test1Facet to the `LoadBalancer`.
+- test5CanCallTest1FacetFunction() 
+  - Verifies that functions from Test1Facet can be successfully called.
+- test6ReplaceSupportsInterfaceFunction() 
+  - Tests the replacement of the `supportsInterface` function in Test1Facet.
+
+### LoadBalancer.t.sol:TestAddFacet2
+
+Ran 4 tests for test/LoadBalancer.t.sol:TestAddFacet2
+
+- test10RemoveAllExceptDiamondCutAndFacetFunction() 
+  - Tests the removal of all functions except DiamondCut and facet-related functions.
+- test7AddTest2FacetFunctions() 
+  - Tests the addition of functions from Test2Facet to the `LoadBalancer`.
+- test8RemoveSomeTest2FacetFunctions() 
+  - Tests the removal of some functions from Test2Facet.
+- test9RemoveSomeTest1FacetFunctions() 
+  - Tests the removal of some functions from Test1Facet.
+
+### LoadBalancer.t.sol:LoadBalancerTest
+
+Ran 3 tests for test/LoadBalancer.t.sol:LoadBalancerTest
+
+- test1HasThreeFacets() 
+  - Verifies that the `LoadBalancer` has three facets.
+- test2FacetsHaveCorrectSelectors()
+  - Ensures that facets in the `LoadBalancer` have correct selectors.
+- test3SelectorsAssociatedWithCorrectFacet() 
+  - Checks that selectors are associated with the correct facets.
+
+
+
+
