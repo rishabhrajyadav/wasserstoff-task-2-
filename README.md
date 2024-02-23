@@ -85,31 +85,6 @@ The script defines the deployment logic for a `LoadBalancer`, including the depl
 use `forge test --ffi` instead `forge test` for excuting the test files successfully.
 Below are the test cases you will get after executing test files .
 
-### Test2Facet.sol:Test2Facet
-
-Ran 20 tests for src/facets/Test2Facet.sol:Test2Facet
-
-- test2Func1() 
-- test2Func10() 
-- test2Func11() 
-- test2Func12() 
-- test2Func13() 
-- test2Func14() 
-- test2Func15() 
-- test2Func16() 
-- test2Func17() 
-- test2Func18() 
-- test2Func19() 
-- test2Func2() 
-- test2Func20() 
-- test2Func3() 
-- test2Func4() 
-- test2Func5() 
-- test2Func6() 
-- test2Func7() 
-- test2Func8() 
-- test2Func9() 
-
 ### Test1Facet.sol:Test1Facet
 
 Ran 20 tests for src/facets/Test1Facet.sol:Test1Facet
